@@ -4,26 +4,32 @@ import { Anime } from '../model/anime';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { AnimesService } from '../services/animes.service';
+import { Observable } from 'rxjs';
+import { HttpClientModule } from '@angular/common/http'; // Importando o HttpClientModule
 
 @Component({
   selector: 'app-animes',
   standalone: true,
-  imports: [CommonModule, MatTableModule, MatCardModule, MatToolbarModule],
+  imports: [
+    CommonModule,
+    MatTableModule,
+    MatCardModule,
+    MatToolbarModule,
+    HttpClientModule  // Incluindo o HttpClientModule aqui
+  ],
   templateUrl: './animes.component.html',
-  styleUrl: './animes.component.scss'
+  styleUrls: ['./animes.component.scss']
 })
-export class AnimesComponent implements OnInit{
+export class AnimesComponent implements OnInit {
 
-  animes: Anime[] = [
-    {_id: '1', name: 'Dragon Ball z', category: 'ação', description: 'lorem samsomado sdksmdms dskdmskmalnas salkdlamkdsasdaka sdlksadmlmd'}
-  ];
+  animes: Observable<Anime[]>;
   displayedColumns = ['name', 'category', 'description'];
 
-  constructor() {
-    
+  constructor(private animesService: AnimesService) {
+    this.animes = this.animesService.list();
   }
 
   ngOnInit(): void {
-    
   }
 }

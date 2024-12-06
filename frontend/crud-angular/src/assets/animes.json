@@ -1,0 +1,62 @@
+[
+  {
+    "_id": "1",
+    "name": "Dragon Ball Z",
+    "category": "ação",
+    "description": "Um jovem Saiyajin chamado Goku protege a Terra enfrentando inimigos poderosos."
+  },
+  {
+    "_id": "2",
+    "name": "Naruto",
+    "category": "aventura",
+    "description": "A história de Naruto Uzumaki, um ninja em busca de se tornar Hokage e ser reconhecido."
+  },
+  {
+    "_id": "3",
+    "name": "One Piece",
+    "category": "fantasia",
+    "description": "Luffy e sua tripulação navegam em busca do lendário tesouro One Piece."
+  },
+  {
+    "_id": "4",
+    "name": "Attack on Titan",
+    "category": "ação",
+    "description": "Humanos lutam pela sobrevivência contra titãs em um mundo pós-apocalíptico."
+  },
+  {
+    "_id": "5",
+    "name": "Death Note",
+    "category": "suspense",
+    "description": "Um estudante encontra um caderno que permite matar qualquer pessoa ao escrever seu nome."
+  },
+  {
+    "_id": "6",
+    "name": "My Hero Academia",
+    "category": "super-heróis",
+    "description": "Em um mundo onde a maioria tem superpoderes, Deku treina para se tornar um herói lendário."
+  },
+  {
+    "_id": "7",
+    "name": "Demon Slayer",
+    "category": "ação",
+    "description": "Tanjiro luta contra demônios para vingar sua família e salvar sua irmã Nezuko."
+  },
+  {
+    "_id": "8",
+    "name": "Fullmetal Alchemist: Brotherhood",
+    "category": "fantasia",
+    "description": "Os irmãos Elric buscam a Pedra Filosofal para restaurar seus corpos após uma transmutação falha."
+  },
+  {
+    "_id": "9",
+    "name": "Sword Art Online",
+    "category": "ficção científica",
+    "description": "Jogadores ficam presos em um MMORPG mortal e precisam vencer para sobreviver."
+  },
+  {
+    "_id": "10",
+    "name": "Bleach",
+    "category": "ação",
+    "description": "Ichigo Kurosaki obtém poderes de Shinigami e protege o mundo dos Hollows."
+  }
+]
