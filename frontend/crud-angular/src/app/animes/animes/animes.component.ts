@@ -10,6 +10,8 @@ import { catchError, Observable, of } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
 import { ErroDialogComponent } from '../../../app/shared/components/erro-dialog/erro-dialog.component'
+import { CategoryPipe } from '../../shared/pipes/category.pipe';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-animes',
@@ -20,7 +22,9 @@ import { ErroDialogComponent } from '../../../app/shared/components/erro-dialog/
     MatCardModule,
     MatToolbarModule,
     HttpClientModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatIconModule,
+    CategoryPipe
   ],
   templateUrl: './animes.component.html',
   styleUrls: ['./animes.component.scss']

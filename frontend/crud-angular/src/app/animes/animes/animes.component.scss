@@ -4,6 +4,11 @@
 table{
   width: 100%;
 }
+td mat-icon {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
 .loading-spinner{
   padding: 25px;
   background-color: rgba(0,0,0.15);
