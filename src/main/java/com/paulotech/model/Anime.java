@@ -21,6 +21,16 @@ public class Anime {
     @Column(nullable = false)
     private String description;
 
+    // Construtor vazio (necessário para o JPA)
+    public Anime() {}
+
+    // Construtor com parâmetros
+    public Anime(String id, String name, String category, String description) {
+        this.name = name;
+        this.category = category;
+        this.description = description;
+    }
+
     // Getters e Setters
     public Long getId() {
         return id;
