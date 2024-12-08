@@ -8,7 +8,7 @@ import { first, tap } from 'rxjs';
 })
 export class AnimesService {
 
-  private readonly API = 'http://localhost:8080/api/animes/'
+  private readonly API = '/api/animes/'
 
   constructor(private httpClient: HttpClient) { }
 
@@ -17,5 +17,9 @@ export class AnimesService {
     .pipe(
       first(),
       tap(animes => console.log(animes)))
+  }
+
+  save(record: Anime){
+    //console.log(record);
   }
 }

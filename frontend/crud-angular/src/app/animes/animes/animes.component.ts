@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Anime } from '../model/anime';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
@@ -12,6 +12,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { ErroDialogComponent } from '../../../app/shared/components/erro-dialog/erro-dialog.component'
 import { CategoryPipe } from '../../shared/pipes/category.pipe';
 import {MatIconModule} from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-animes',
@@ -23,20 +25,24 @@ import {MatIconModule} from '@angular/material/icon';
     MatToolbarModule,
     HttpClientModule,
     MatProgressSpinnerModule,
+    MatButtonModule,
     MatIconModule,
     CategoryPipe
   ],
   templateUrl: './animes.component.html',
-  styleUrls: ['./animes.component.scss']
+  styleUrls: ['./animes.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class AnimesComponent implements OnInit {
 
   animes$: Observable<Anime[]>;
-  displayedColumns = ['name', 'category', 'description'];
+  displayedColumns = ['name', 'category', 'description', 'actions'];
 
   constructor(
     private animesService: AnimesService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router,
+    private route: ActivatedRoute
   ) {
     this.animes$ = this.animesService.list().pipe(
       catchError(error => {
@@ -57,5 +63,9 @@ export class AnimesComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+
+  onAdd(){
+    this.router.navigate(['animes/new']);
   }
 }
