@@ -1,8 +1,7 @@
-*{
-  padding: 2rem;
-}
 table{
   width: 100%;
+  padding: 2rem;
+  background-color: rgba(0,0,0.15);
 }
 td mat-icon {
   vertical-align: middle;
@@ -16,3 +15,4 @@ td mat-icon {
   align-items:center;
   justify-content: center;
 }
+
