@@ -11,9 +11,9 @@ export class CategoryPipe implements PipeTransform {
       case 'ação': return 'sports_martial_arts';
       case 'fantasia': return 'auto_awesome';
       case 'suspense': return 'visibility';
-      case 'ficção científica': return 'science';
+      case 'ficção': return 'science';
       case 'aventura': return 'hiking';
-      case 'super-heróis': return 'bolt'
+      case 'super': return 'bolt'
     }
     return 'computer';
   }
