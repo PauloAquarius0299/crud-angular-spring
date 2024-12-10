@@ -27,7 +27,7 @@ export class AnimeFormComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    //private service: AnimesService
+    private service: AnimesService
   ){
     this.form = this.formBuilder.group({
       name: [null],
@@ -40,9 +40,7 @@ export class AnimeFormComponent implements OnInit {
 
   }
 
-  onSubmit(){
-    //this.service.save(this.form.value);
-  }
+  
 
   onCancel(){
 
